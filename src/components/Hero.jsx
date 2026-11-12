@@ -1,12 +1,17 @@
 import React from "react";
 import { IndianRupee, ChevronRight } from "lucide-react";
 
-const Hero = ({phoneName, phonePrice, phoneImage, phoneSave, phoneDiscount}) => {
-    // console.log(phoneName)
+const Hero = ({phoneName, productId, phonePrice, phoneImage, phoneSave, phoneDiscount}) => {
+    
+
+    const funck = (e) => {
+      console.log(e)
+      console.log(productId)
+    }
   return (
     
      
-        <div className="phoneDetails">
+        <div onClick={funck} className="phoneDetails">
           <div className="phoneImage">
             <img
               src={phoneImage}

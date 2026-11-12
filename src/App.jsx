@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Dropdowns from "./components/Dropdowns";
 import Hero from "./components/Hero";
@@ -8,34 +8,52 @@ import Aisehi from "./components/Aisehi";
 import Hero_3 from "./components/Hero_3";
 import Footer from "./components/footer";
 import LoginPages from "./components/LoginPages";
-const DailyEssentialsImages = import.meta.glob(
-  "./assets/DailyEssentials/*",
-  {
-    eager: true,
-    query: "?url",
-    import: "default",
-  }
-);
-const GrabSmartPhonesImages = import.meta.glob(
-  "./assets/GrabSmartPhones/*",
-  {
-    eager: true,
-    query: "?url",
-    import: "default",
-  }
-);
-const TopCategoriesImages = import.meta.glob(
-  "./assets/TopCategories/*",
-  {
-    eager: true,
-    query: "?url",
-    import: "default",
-  }
-);
+import SeenProduct from "./components/SeenProduct";
+
 
 const App = () => {
+
+  const getDailyEssentials = async() => {
+    const result = await fetch('https://dummyjson.com/products/category/groceries?limit=9')
+    const data = await result.json()
+    setEssentials(data.products)
+    // console.log(data.products)
+  }
+
+
+  const getProduct = async () => {
+const response = await fetch("https://dummyjson.com/products?limit=0");
+const data = await response.json();
+
+const randomProducts = data.products
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 10);
+
+setProduct(randomProducts);
+  };
+
+  const getMobiles = async() => {
+    const response = await fetch("https://dummyjson.com/products/category/smartphones?limit=8")
+    const data = await response.json()
+    setMobiles(data.products)
+  }
+
+
+  useEffect(() => {
+    getDailyEssentials()
+    getProduct()
+    getMobiles()
+  }, [])
+
+
+
+
   const [showLogin, setShowLogin] = useState(false);
   const [LeftP, setLeftP] = useState('-250px');
+
+  const [products, setProduct] = useState([])
+  const [essentials, setEssentials] = useState([])
+  const [mobiles, setMobiles] = useState([])
 
   const buttons = [
     "Groceries",
@@ -48,139 +66,7 @@ const App = () => {
     "Sports, Toys & Luggage",
   ];
 
-  const smartphones = [
-    {
-      name: "Samsung Galaxy S25 Ultra",
-      price: "91,899",
-      image: GrabSmartPhonesImages["./assets/GrabSmartPhones/SamsungS25.jpg"],
-      save: "5,999",
-      discount: "97,898",
-    },
-    {
-      name: "iQOO Neo 10",
-      price: "43,999",
-      image: GrabSmartPhonesImages["./assets/GrabSmartPhones/IqooNeo.jpg"],
-      save: "10,459",
-      discount: "54,458",
-    },
-    {
-      name: "OnePlus Nord CE6 5G",
-      price: "34,999",
-      image: GrabSmartPhonesImages["./assets/GrabSmartPhones/OnePlusNord.jpg"],
-      save: "11,499",
-      discount: "46,498",
-    },
-    {
-      name: "Oppo Reno16 5G",
-      price: "72,999",
-      image: GrabSmartPhonesImages["./assets/GrabSmartPhones/OppoReno.jpg"],
-      save: "10,999",
-      discount: "83,998",
-    },
-    {
-      name: "Samsung Galaxy M47 5G",
-      price: "26,999",
-      image: GrabSmartPhonesImages["./assets/GrabSmartPhones/SamsungM47.jpg"],
-      save: "31,949",
-      discount: "58,948",
-    },
-    {
-      name: "Apple iPhone 15",
-      price: "59,900",
-      image: GrabSmartPhonesImages["./assets/GrabSmartPhones/Iphone15.jpg"],
-      save: "18,919",
-      discount: "78,819",
-    },
-    {
-      name: "Itel Zeno 100 Lite",
-      price: "7,999",
-      image: GrabSmartPhonesImages["./assets/GrabSmartPhones/ItelZeno.jpg"],
-      save: "25,109",
-      discount: "33,108",
-    },
-  ];
 
-  const products = [
-    {
-      name: "Smart Phone",
-      image: TopCategoriesImages["./assets/TopCategories/Smartphones.jpg"],
-    },
-    {
-      name: "LED TV",
-      image: TopCategoriesImages["./assets/TopCategories/LedTv.jpg"],
-    },
-    {
-      name: "Refrigerator",
-      image: TopCategoriesImages["./assets/TopCategories/Frige.jpg"],
-    },
-    {
-      name: "CPU",
-      image: TopCategoriesImages["./assets/TopCategories/CPU.jpg"],
-    },
-    {
-      name: "Washing Machine",
-      image: TopCategoriesImages["./assets/TopCategories/Washing.jpg"],
-    },
-    {
-      name: "Inverter AC",
-      image: TopCategoriesImages["./assets/TopCategories/InverterAc.jpg"],
-    },
-    {
-      name: "Laptop",
-      image: TopCategoriesImages["./assets/TopCategories/Laptop.jpg"],
-    },
-    {
-      name: "Home Theater",
-      image: TopCategoriesImages["./assets/TopCategories/HomeTheater.jpg"],
-    },
-    {
-      name: "Oven",
-      image: TopCategoriesImages["./assets/TopCategories/Oven.jpg"],
-    },
-    {
-      name: "Headphones",
-      image: TopCategoriesImages["./assets/TopCategories/HeadPhone.jpg"],
-    },
-  ];
-
-  const dailyEssentials = [
-    {
-      name: "Mango",
-      image:  DailyEssentialsImages["./assets/DailyEssentials/Mango.jpg"],
-    },
-    {
-      name: "Fruits",
-      image: DailyEssentialsImages["./assets/DailyEssentials/Fruits.jpg"],
-    },
-    {
-      name: "Vegitables",
-      image: DailyEssentialsImages["./assets/DailyEssentials/Vegetables.jpg"],
-    },
-    {
-      name: "Strowberry",
-      image: DailyEssentialsImages["./assets/DailyEssentials/Straberry.jpg"],
-    },
-    {
-      name: "Green Vegitables",
-      image: DailyEssentialsImages["./assets/DailyEssentials/GreenVegetables.jpg"],
-    },
-    {
-      name: "Juise",
-      image: DailyEssentialsImages["./assets/DailyEssentials/Juise.jpg"],
-    },
-    {
-      name: "Snacks",
-      image: DailyEssentialsImages["./assets/DailyEssentials/Snacks.jpg"],
-    },
-    {
-      name: "Milk",
-      image: DailyEssentialsImages["./assets/DailyEssentials/Milk.jpg"],
-    },
-    {
-      name: "Spices",
-      image: DailyEssentialsImages["./assets/DailyEssentials/Spices.jpg"],
-    },
-  ];
 
   return (
     <>
@@ -190,7 +76,7 @@ const App = () => {
 
       <div className="myBtns">
         {buttons.map((came, index) => (
-          <Dropdowns key={index} came={came} />
+          <Dropdowns key={index.id} came={came} />
         ))}
       </div>
       <hr />
@@ -204,14 +90,15 @@ const App = () => {
           />
 
           <div className="AllPhones">
-            {smartphones.map((phone, ind) => (
+            {mobiles.map((mobile, ind) => (
               <Hero
-                key={ind}
-                phoneName={phone.name}
-                phonePrice={phone.price}
-                phoneImage={phone.image}
-                phoneSave={phone.save}
-                phoneDiscount={phone.discount}
+                key={ind.id}
+                productId={mobile.id}
+                phoneName={mobile.title}
+                phonePrice={Math.floor((mobile.price)*93.77)}
+                phoneImage={mobile.images[2]}
+                phoneSave={Math.floor((mobile.discountPercentage)*93.77)}
+                phoneDiscount={(Math.floor((mobile.price)*93.77))+(Math.floor((mobile.discountPercentage)*93.77))}
               />
             ))}
           </div>
@@ -225,11 +112,11 @@ const App = () => {
         <div className="smartPhone">
           <HeroSectionNavbar text="Shop From" blueText="Top Categories" />
           <div className="AllProducts">
-            {products.map((product, ind) => (
+            {products.map((products, indx) => (
               <Hero_2
-                key={ind}
-                productName={product.name}
-                productImage={product.image}
+                key={indx.id}
+                productName={products.category}
+                productImage={products.thumbnail}
               />
             ))}
           </div>
@@ -242,11 +129,11 @@ const App = () => {
         <div className="smartPhone">
           <HeroSectionNavbar text="Daily" blueText="Essentials" />
           <div className="AllEssentials">
-            {dailyEssentials.map((essentials, ind) => (
+            {essentials.map((essentials, indsx) => (
               <Hero_3
-                key={ind}
-                essentialName={essentials.name}
-                essentialImage={essentials.image}
+                key={indsx.id}
+                essentialName={essentials.title}
+                essentialImage={essentials.images[0]}
               />
             ))}
           </div>
@@ -255,6 +142,8 @@ const App = () => {
       <br />
       <br />
       <Footer />
+
+      {/* <SeenProduct /> */}
     </>
   );
 };
