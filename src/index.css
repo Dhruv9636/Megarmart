@@ -1,0 +1,714 @@
+@import "tailwindcss";
+
+button {
+  cursor: pointer;
+}
+
+/* Navbar =>  */
+.nav {
+  width: 100%;
+  padding: 6px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.juNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.listIcon {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 3px;
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+  color: rgb(18, 143, 245);
+  cursor: pointer;
+}
+
+.head {
+  color: rgb(18, 143, 245);
+  font-weight: 600;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.part-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0px 15px;
+  border-radius: 8px;
+}
+
+.inp {
+  width: 350px;
+  height: 40px;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.icons {
+  color: rgb(18, 143, 245);
+  cursor: pointer;
+}
+
+.shop-related {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.same {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.devider {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+}
+
+.btns {
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  padding: 5px 10px;
+  border-radius: 40px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: none;
+  outline: none;
+  transition-duration: 0.3s;
+}
+
+.btns:focus {
+  background-color: rgb(18, 143, 245);
+  color: #ffffff;
+}
+
+.ChevronDown {
+  height: 10px;
+  width: 10px;
+}
+
+.myBtns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin: 10px 0px;
+}
+
+/* hero section =>  */
+
+.hero {
+  width: 100%;
+  padding: 0px 35px;
+}
+
+.smartPhone {
+  padding: 6px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.phoneSectionNav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.deal {
+  font-size: 16px;
+  font-weight: 600;
+  border-width: 2px;
+  border-color: transparent transparent rgb(18, 143, 245) transparent;
+  padding-bottom: 4px;
+}
+
+.phone {
+  color: rgb(18, 143, 245);
+}
+
+.viewBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  padding-bottom: 7px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.viewBtnSign {
+  height: 16px;
+  width: 16px;
+}
+
+.phoneDetails {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  width: 15%;
+  height: 95%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.phoneDetails:hover {
+  border: 1px solid rgb(18, 143, 245);
+  transform: scale(1.02);
+  box-shadow: 0px 3px 10px 4px rgba(0, 0, 0, 0.05);
+}
+
+.phoneImage {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.phoneImg {
+  height: 100%;
+  width: 100%;
+}
+
+.phonePriseSection {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 30%;
+}
+
+.AllPhones {
+  width: 100%;
+  height: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.align {
+  width: 100%;
+}
+
+.phoneName {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0px 5px;
+  padding: 0px 10px;
+  white-space: nowrap;
+}
+
+.phonePriseVala {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.phonePriseSign {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 0px 5px;
+  padding: 0px 10px;
+}
+
+.wrong {
+  color: rgb(104, 104, 104);
+  text-decoration: line-through;
+}
+
+.wrongRupee {
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 2px;
+}
+
+.rupee {
+  height: 14px;
+  width: 14px;
+}
+
+.phonePrise {
+  color: green;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Hero_2 section */
+
+.AllProducts {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.ProductDetails {
+  /* border: 1px solid rgba(0, 0, 0, 0.05); */
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* border-radius: 50%; */
+  width: 9%;
+  height: 75%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.ProductDetails:hover {
+  scale: 1.05;
+}
+
+.productImage {
+  /* border: 1px solid red; */
+  height: 75%;
+  width: 70%;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition-duration: 0.3s;
+}
+
+.productImg {
+  height: 60%;
+  width: 60%;
+  /* border: 1px solid rgba(0, 0, 0, 0.05); */
+  /* border-radius: 50%; */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.productImage:hover {
+  border: 1px solid rgb(18, 143, 245);
+  box-shadow: 0px 3px 10px 4px rgba(0, 0, 0, 0.05);
+}
+
+.productName {
+  /* border: 1px solid; */
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+.AllEssentials {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  gap: 15px;
+  /* padding: 5px 10px; */
+}
+
+.essentialDetails {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 95%;
+  width: 10%;
+  cursor: pointer;
+}
+
+.essentialImage {
+  /* border: 2px solid red; */
+  height: 70%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.05);
+  transition-duration: 0.3s;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.essentialImage:hover {
+  border: 1px solid rgb(18, 143, 245);
+  box-shadow: 0px 3px 10px 4px rgba(0, 0, 0, 0.05);
+  scale: 1.04;
+}
+
+.essentialImg {
+  /* border: 2px solid green; */
+  height: 70%;
+  width: 70%;
+}
+
+.info {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.essentialName {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}
+
+.essentialDiscount {
+  font-size: 15px;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}
+
+/* footer */
+
+/* Footer Global Container Box */
+.footer-container {
+  background-color: #008ecc; /* Exact Blue Background Color */
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 60px 40px 20px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Flex layout structure for links columns */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Standard columns sizing */
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Headings with underlined layouts */
+.footer-column h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  display: inline-block;
+  min-width: 180px;
+}
+
+/* Brand Section Logo Text */
+.brand-logo {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.contact-group {
+  margin-bottom: 30px;
+}
+
+.contact-group h3 {
+  border-bottom: none;
+  margin-bottom: 15px;
+  padding-bottom: 0;
+  font-size: 16px;
+}
+
+/* Contacts Alignment Layout */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.contact-icon {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.contact-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* App Badges Styling Group */
+.download-section h3 {
+  border-bottom: none;
+  margin-bottom: 15px;
+  padding-bottom: 0;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.app-btn img {
+  height: 42px; /* Set height for badges alignment */
+  display: block;
+}
+
+/* List Item Formatting with Bullet Dots */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 15px;
+}
+
+/* Small bullet dot before list elements */
+.footer-links li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* Copyright Row Line Styling */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive adjustment for Mobile screens */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 40px 20px 20px 20px;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer-column h3 {
+    width: 100%;
+  }
+}
+
+.logInPage {
+  /* border: 2px solid black; */
+  height: 100vh;
+  width: 99vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: popup 0.3s linear 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 999;
+}
+
+@keyframes popup {
+  0% {
+    scale: 0;
+  }
+  50% {
+    scale: 0.5;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+
+.cancleButton{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.cancleBtn{
+  padding: 10px 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.LogInForm {
+  height: 400px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  background-color: white;
+}
+
+.LogInHead {
+  font-size: 30px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.input {
+  width: 80%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.inps {
+  padding: 0px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+}
+
+.point {
+  cursor: pointer;
+}
+
+.SignInBtn {
+  background-color: #008ecc;
+  color: whitesmoke;
+  font-size: 20px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.SignInBtn:active {
+  transform: scale(0.9);
+}
+
+#gogo{
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  bottom: 0px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  top: 0px;
+  /* left: -201px; */
+  transition-duration: 0.3s;
+  box-shadow: 0px 0px 4px black;
+}
+
+.popo{
+  width: 100%;
+  padding-left: 20px;
+}
+
+.sure{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
