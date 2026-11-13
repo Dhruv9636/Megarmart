@@ -720,10 +720,29 @@ hr {
 .seenProduct {
   width: 100%;
   height: 90vh;
-  /* background-color: #008ecc; */
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 1);
+  animation: popup 0.3s linear 1;
+  z-index: 111;
+  position: absolute;
+  /* border: 2px solid black; */
+  top: 80px;
+}
+
+@keyframes popup {
+  0% {
+    scale: 0;
+  }
+  50% {
+    scale: 0.5;
+  }
+  100% {
+    scale: 1;
+  }
 }
 
 .SingleProductDetail {
@@ -821,6 +840,8 @@ hr {
   align-items: center;
   padding: 0px 5px;
 }
+
+
 
 .mobileNameOrignal{
   font-weight: 500;
@@ -1007,4 +1028,56 @@ hr {
 
 .QuantityDown:active{
   transform: scale(0.85);
+}
+
+
+
+/* ExtraProducts =>  */
+.AllMobiles{
+  width: 100%;
+}
+
+
+.ExtraHead{
+  width: 100%;
+  text-align: left;
+  padding: 0px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #008ecc;
+  text-decoration: #008ecc underline;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.ExtraChooseIcon{
+  height: 20px;
+  width: 20px;
+  margin: 6px 0px 0px 0px;
+}
+
+
+.ExtraMobiles{
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  /* border: 2px solid black; */
+  z-index: 1000000;
+}
+
+.SingleMobiles{
+  border: 2px solid green;
+}
+
+
+
+.phoneDetails{
+  /* background-color: #008ecc; */
 }

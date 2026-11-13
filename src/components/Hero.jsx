@@ -1,12 +1,12 @@
 import React from "react";
 import { IndianRupee, ChevronRight } from "lucide-react";
 
-const Hero = ({phoneName, productId, phonePrice, phoneImage, phoneSave, phoneDiscount}) => {
+const Hero = ({phoneName, phoneId, phonePrice, phoneImage, phoneSave, phoneDiscount, mobileId, openDetails}) => {
     
 
     const funck = (e) => {
-      console.log(e)
-      console.log(productId)
+      mobileId(phoneId)
+      openDetails()
     }
   return (
     

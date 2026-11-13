@@ -1,8 +1,11 @@
 import React from "react";
 
-const Hero_3 = ({essentialImage, essentialName}) => {
+const Hero_3 = ({essentialImage, essentialName, essentialId}) => {
+  const funkc = (e) => {
+    console.log(essentialId)
+  }
   return (
-    <div className="essentialDetails">
+    <div className="essentialDetails" onClick={funkc}>
       <div className="essentialImage">
         <img src={essentialImage} className="essentialImg" />
       </div>
